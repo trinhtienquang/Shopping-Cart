@@ -1,0 +1,1 @@
+export const LOCALSTORAGE_NAME = "shopping_cart";

@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import { React, Component } from 'react';
 import './App.css';
+import Cart from './Component/Cart';
+import ListProduct from './Component/ListProduct';
+import Notify from './Component/Notify';
+import Title from './Component/Title';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="container">
+          {/* TITLE : START */}
+          <Title />
+          {/* TITLE : END */}
+          <div className="row">
+            {/* LIST PRODUCT : START */}
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <ListProduct />
+            </div>
+            {/* LIST PRODUCT : END */}
+            {/* CART : START */}
+            <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <Cart />
+              <Notify />
+            </div>
+            {/* CART : END */}
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
